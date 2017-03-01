@@ -18,7 +18,7 @@ public class MidpointFindingKarel extends SuperKarel {
 		//find midpoint
 		while(beepersPresent()) {
 			collectLeftEnd();
-			secondRowAddOne();
+			firstRowAddOne();
 			if(frontIsClear()){
 				move();
 			}
@@ -49,8 +49,6 @@ public class MidpointFindingKarel extends SuperKarel {
 	 * 
 	 */
 	private void collectLeftEnd() {
-		goToOrigin();
-		moveToBeeper();
 		if(beepersPresent()) {
 			pickBeeper();
 			
@@ -63,14 +61,12 @@ public class MidpointFindingKarel extends SuperKarel {
 		}
 	}
 	/*
-	 * go to 2nd row, add one more beeper
+	 * go to origin 1st row, add one more beeper
 	 * precondition: anywhere at 1st row facing east
 	 * postcondition: on 2nd row, at the most end where no more beeper exist
 	 */
-	private void secondRowAddOne() {
+	private void firstRowAddOne() {
 		goToOrigin();
-		bigTurnLeft();
-		turnRight();
 		while(beepersPresent()) {//arrive at the end of existing beepers
 			move();
 		}
