@@ -14,15 +14,26 @@ public class CheckerboardKarel extends SuperKarel {
 		putBeeper();
 		while (facingEast()||facingWest()) {
 			moveToNextPoint();
-			
+			if (facingEast()||facingWest()) {
 				putBeeper();
-			
+			}
 		}
 	}
+	/*
+	 * move to next point
+	 * precondition: facing east or facing west
+	 * postcondition: facing east or facing west
+	 */
 	private void moveToNextPoint() {
 		moveOneStep();
 		moveOneStep();
 	}
+	/*
+	 * when front is clear, move
+	 * when front is blocked, turnAndMove
+	 * precondition: facing east or facing west
+	 * postcondition: facing east or facing west
+	 */
 	private void moveOneStep() {
 		if (frontIsClear()) {
 			move();
@@ -30,6 +41,9 @@ public class CheckerboardKarel extends SuperKarel {
 			turnAndMove();
 		}
 	}
+	/*
+	 * turn move and turn
+	 */
 	private void turnAndMove() {
 		if (facingEast()) {
 			turnLeft();
