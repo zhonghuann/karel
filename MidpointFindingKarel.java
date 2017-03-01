@@ -24,7 +24,6 @@ public class MidpointFindingKarel extends SuperKarel {
 			moveToBeeper();
 		}
 		goTomidpoint();
-		putBeeper();
 	}
 	/*
 	 * fillFirstRow method is defined to fill the 1st row with beepers
