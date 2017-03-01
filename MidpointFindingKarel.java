@@ -76,24 +76,13 @@ public class MidpointFindingKarel extends SuperKarel {
 	 */
 	private void goTomidpoint() {
 		goToOrigin();
-		moveToWall();
-		bigTurnLeft();
-		turnLeft();
-		moveToBeeper();
-		bigTurnLeft();
-	}
-	/*
-	 * collet the beepers on 2nd row
-	 */
-	private void collectSecondRow() {
-		goToOrigin();
-		bigTurnLeft(); //facing north
-		turnRight(); //facing east
-		while(beepersPresent() || frontIsBlocked()) {
+		while (beepersPresent()) {
 			pickBeeper();
 			move();
 		}
+		putBeeper();
 	}
+	
 	/*
 	 * Move Karel back to origin of map(1,1), make it facing east
 	 * precondition: can be any caxe
