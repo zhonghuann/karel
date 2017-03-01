@@ -18,6 +18,7 @@ public class StoneMasonKarel extends SuperKarel {
 		moveToNextLine();
 		}
 		repairColumn();
+		moveToBottom();
 	}
 	/*
 	 * repair the column
