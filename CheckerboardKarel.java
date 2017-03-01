@@ -14,9 +14,9 @@ public class CheckerboardKarel extends SuperKarel {
 		putBeeper();
 		while (facingEast()||facingWest()) {
 			moveToNextPoint();
-			if (facingEast()||facingWest()) {
+			
 				putBeeper();
-			}
+			
 		}
 	}
 	private void moveToNextPoint() {
