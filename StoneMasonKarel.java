@@ -12,7 +12,7 @@ import stanford.karel.*;
 
 public class StoneMasonKarel extends SuperKarel {
 	public void run() {
-		for (int i = 0; i<3; i++){
+		while (frontIsClear()){
 		repairColumn();
 		moveToNextLine();
 		}
