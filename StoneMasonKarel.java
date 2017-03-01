@@ -56,9 +56,12 @@ public class StoneMasonKarel extends SuperKarel {
 	 * goto the next avenue
 	 */
 	private void moveToNextLine() {
-		for (int i=0; i<4; i++) {
-			move();
+		if(frontIsClear()){
+			for (int i=0; i<4; i++) {
+				move();
+			}	
 		}
+		
 	}
 	// You fill in this part
 
