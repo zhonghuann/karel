@@ -17,8 +17,8 @@ public class MidpointFindingKarel extends SuperKarel {
 		fillFirstRow();
 		//find midpoint
 		while(beepersPresent()) {
-			secondRowAddOne();
 			collectLeftEnd();
+			secondRowAddOne();
 			if(frontIsClear()){
 				move();
 			}
