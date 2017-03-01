@@ -14,11 +14,9 @@ public class StoneMasonKarel extends SuperKarel {
 	public void run() {
 		for (int i = 0; i<3; i++){
 		repairColumn();
-		moveToBottom();
 		moveToNextLine();
 		}
 		repairColumn();
-		moveToBottom();
 	}
 	/*
 	 * repair the column
@@ -32,6 +30,7 @@ public class StoneMasonKarel extends SuperKarel {
 		if (noBeepersPresent()) {
 			putBeeper();
 		}
+		moveToBottom();
 	}
 	private void repairStone() {
 		if (noBeepersPresent()){
