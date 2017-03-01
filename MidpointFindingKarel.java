@@ -184,4 +184,3 @@ public class MidpointFindingKarel extends SuperKarel {
 	
 }// end of public class
 
-}
