@@ -19,7 +19,9 @@ public class StoneMasonKarel extends SuperKarel {
 		
 	}
 	/*
-	 * repair the column
+	 * make sure every spot on this column has a beeper
+	 * precondition: karel facing east
+	 * postcondition: karel back to the bottom of this column
 	 */
 	private void repairColumn() {
 		turnLeft();
@@ -34,6 +36,8 @@ public class StoneMasonKarel extends SuperKarel {
 	}
 	/*
 	 * put beepers where need to be repaired
+	 * precondition: none
+	 * postcondition: beepers on this column
 	 */
 	private void repairStone() {
 		if (noBeepersPresent()){
@@ -42,6 +46,8 @@ public class StoneMasonKarel extends SuperKarel {
 	}
 	/*
 	 * back to the bottom line
+	 * precondition: none
+	 * postcondition: karel at the bottom, facing east
 	 */
 	private void moveToBottom() {
 		while (notFacingSouth()) {
@@ -54,6 +60,8 @@ public class StoneMasonKarel extends SuperKarel {
 	}
 	/*
 	 * goto the next avenue
+	 * precondition: none
+	 * postcondition: karel move 4 units next, facing east
 	 */
 	private void moveToNextLine() {
 		if(frontIsClear()){
@@ -65,6 +73,5 @@ public class StoneMasonKarel extends SuperKarel {
 		}
 		
 	}
-	// You fill in this part
 
 }
