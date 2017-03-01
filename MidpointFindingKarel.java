@@ -79,6 +79,8 @@ public class MidpointFindingKarel extends SuperKarel {
 			pickBeeper();
 			move();
 		}
+		turnAround();
+		move();
 		putBeeper();
 	}
 	
@@ -106,31 +108,10 @@ public class MidpointFindingKarel extends SuperKarel {
 	 * postcondition: share same orientation as in precondition, standing on the corner where first beeper appears on its way
 	 */
 	private void moveToBeeper(){
-		while (noBeepersPresent()) {
+		while (noBeepersPresent() && frontIsClear()) {
 			move();
 		}
 	}
-	/*
-	 * go to upper/lower row above without changing column number
-	 * make a big turn left
-	 * precondition: any case
-	 * postcondition: same column, arrive at uper/lower row
-	 * which is one above/under the row in precondition
-	 * direction will turn left
-	 */
-	private void bigTurnLeft(){
-		turnLeft();
-		move();
-	}
-	/*
-	 * move Karel to the wall
-	 * precondition: any case
-	 * postcondition: near the wall
-	 */
-	private void moveToWall() {
-		while(frontIsClear()) {
-			move();
-		}
-	}
+	
 }// end of public class
 
