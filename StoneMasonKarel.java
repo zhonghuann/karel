@@ -27,6 +27,9 @@ public class StoneMasonKarel extends SuperKarel {
 			repairStone();
 			move();
 		}
+		if (noBeepersPresent()) {
+			putBeeper();
+		}
 	}
 	private void repairStone() {
 		if (noBeepersPresent()){
