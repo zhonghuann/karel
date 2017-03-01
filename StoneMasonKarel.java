@@ -17,6 +17,7 @@ public class StoneMasonKarel extends SuperKarel {
 		moveToBottom();
 		moveToNextLine();
 		}
+		repairColumn();
 	}
 	/*
 	 * repair the column
@@ -43,9 +44,9 @@ public class StoneMasonKarel extends SuperKarel {
 		while (frontIsClear()) {
 			move();
 		}
+		turnLeft();
 	}
 	private void moveToNextLine() {
-		turnLeft();
 		for (int i=0; i<4; i++) {
 			move();
 		}
