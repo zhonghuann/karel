@@ -36,7 +36,6 @@ public class MidpointFindingKarel extends SuperKarel {
 	 * postcondition: facing east, at the most right end of 1st row
 	 */
 	private void fillFirstRow(){
-		goToOrigin();//go to (1,1) facing east
 		while(frontIsClear()) {
 			putBeeper();
 			move();
