@@ -113,5 +113,15 @@ public class MidpointFindingKarel extends SuperKarel {
 		}
 	}
 	
+	/*
+	 * move Karel to the wall
+	 * precondition: any case
+	 * postcondition: near the wall
+	 */
+	private void moveToWall() {
+		while(frontIsClear()) {
+			move();
+		}
+	}
 }// end of public class
 
