@@ -15,6 +15,7 @@ import stanford.karel.*;
 public class MidpointFindingKarel extends SuperKarel {
 	public void run() {
 		fillFirstRow();
+		goToOrigin();
 		//find midpoint
 		while(beepersPresent()) {
 			collectLeftEnd();
