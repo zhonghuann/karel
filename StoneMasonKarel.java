@@ -32,11 +32,17 @@ public class StoneMasonKarel extends SuperKarel {
 		}
 		moveToBottom();
 	}
+	/*
+	 * put beepers where need to be repaired
+	 */
 	private void repairStone() {
 		if (noBeepersPresent()){
 			putBeeper();
 		}
 	}
+	/*
+	 * back to the bottom line
+	 */
 	private void moveToBottom() {
 		while (notFacingSouth()) {
 			turnLeft();
@@ -46,6 +52,9 @@ public class StoneMasonKarel extends SuperKarel {
 		}
 		turnLeft();
 	}
+	/*
+	 * goto the next avenue
+	 */
 	private void moveToNextLine() {
 		for (int i=0; i<4; i++) {
 			move();
