@@ -20,15 +20,11 @@ public class MidpointFindingKarel extends SuperKarel {
 		while(beepersPresent()) {
 			collectLeftEnd();
 			firstRowAddOne();
-			if(frontIsClear()){
-				move();
-			}
+			move();
+			moveToBeeper();
 		}
 		goTomidpoint();
 		putBeeper();
-		collectSecondRow();
-		goToOrigin();
-		moveToBeeper();
 	}
 	/*
 	 * fillFirstRow method is defined to fill the 1st row with beepers
